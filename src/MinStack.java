@@ -4,7 +4,7 @@ public class MinStack {
 
   //Create a stack TODO this is just the blueprint
   //Testing making changes and reversing changes
-  Stack<Integer> stack = 
+  Stack<Integer> stack = new Stack<>();
     public MinStack() {
 
     }
