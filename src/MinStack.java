@@ -9,4 +9,18 @@ public class MinStack {
 
     }
 
+    private void push (int num) {
+      stack.push(num);
+    }
+
+    private void pop () {
+      stack.pop();
+    }
+
+    public int top() {
+      return stack.peek();
+    }
+
+
+
 }
