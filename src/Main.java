@@ -169,13 +169,45 @@ public class Main {
         System.out.println(obj.add(4));
 */
 
-        int [] recentCallsTimes = {1, 2, 4000};
+       /* int [] recentCallsTimes = {1, 2, 4000};
 
         RecentCounter recentCalls = new RecentCounter();
 
         for(int i = 0; i < recentCallsTimes.length; ++i) {
             System.out.println(recentCalls.ping(recentCallsTimes[i]));
-        }
+        }*/
+
+        MinStack minStack = new MinStack();
+
+        minStack.push(5);
+        minStack.push(8);
+        minStack.push(54);
+        minStack.push(1);
+        minStack.push(6);
+        minStack.push(30);
+
+        System.out.println(minStack.top());
+        minStack.pop();
+
+        System.out.println(minStack.top());
+
+        System.out.println(minStack.getMin());
+
+        minStack.pop();
+        minStack.pop();
+
+        System.out.println(minStack.top());
+
+        System.out.println(minStack.getMin());
+
+
+
+
+
+
+
+
+
     }
 
     //***SOLUTIONS FOR PROBLEM 1 AND SIMILAR PROBLEM 1***
@@ -719,7 +751,74 @@ IMPLEMENT:
     int top() gets the top element of the stack.
     int getMin() retrieves the minimum element in the stack. You must implement a solution with O(1) time complexity for each function.
 
+
+    UNDERSTAND
+    We are designing a stack that supports push, pop and getting the minimum value in constant time
+
+    Question
+    if there is an empty input, what should be the output
+    Do we accept duplicates as inputs
+
+
+    MATCH
+    We are going to be using a stack and so pop and push will make use of the built-in Stack in Java
+    to get the top, we can use the peek to return the top of the stack
+    and for the minimum , we need an auxiliary data structure to have the items in order with the minimum as the head
+    or first element
+
+    PLAN
+    Create the class with the methods
+
+
+    class Minstack {
+
+    -Stack - data as in comes to be able to get top, push or pop
+
+    -Queue- to store elements in ascending order, and we can the min as the head of the queue
+
+
+            void push(int input ) {
+            stack.push(input)
+            }
+
+            void pop() {
+
+            queue remove(stack.pop)
+
+            }
+
+            int top () {
+            return stack.peek();
+            }
+
+            int min () {
+            return auxDataStructure.get(0);
+            }
+
+
+
+
+        }
+
+
+       REVIEW
+
+
+
+        EVALUATE
+
+        SPACE COMPLEXITY
+
+        O(N) As we need to store up to N elements-
+
+        TIME COMPLEXITY
+
+       O(1) constant
+
+
+
      */
+
 
 
 
