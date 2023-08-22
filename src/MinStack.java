@@ -12,7 +12,7 @@ public class MinStack {
 
     public void push (int num) {
       s.push(num);
-      if(m.empty()|| num < m.peek())
+      if(m.empty() || num < m.peek())
         m.push(num);
       else
         m.push(m.peek());
