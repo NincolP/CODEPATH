@@ -177,7 +177,7 @@ public class Main {
             System.out.println(recentCalls.ping(recentCallsTimes[i]));
         }*/
 
-        MinStack minStack = new MinStack();
+        /*MinStack minStack = new MinStack();
 
         minStack.push(5);
         minStack.push(8);
@@ -198,7 +198,7 @@ public class Main {
 
         System.out.println(minStack.top());
 
-        System.out.println(minStack.getMin());
+        System.out.println(minStack.getMin());*/
 
 
 
@@ -795,15 +795,11 @@ IMPLEMENT:
             return auxDataStructure.get(0);
             }
 
-
-
-
         }
 
 
        REVIEW
-
-
+       Testing for cases where push was followed by pop and getMin
 
         EVALUATE
 
@@ -814,6 +810,49 @@ IMPLEMENT:
         TIME COMPLEXITY
 
        O(1) constant
+     */
+
+
+    /*
+    PROBLEM 5
+    Problem 5: Implement Queue Using Stacks
+    Implement a first in first out (FIFO) queue using only two stacks. The implemented queue should support all the functions of a normal
+    queue (push, peek, pop, and empty).
+
+    Implement the MyQueue class:
+
+    void push(int x) Pushes element x to the back of the queue.
+    int pop() Removes the element from the front of the queue and returns it.
+    int peek() Returns the element at the front of the queue.
+    boolean empty() Returns true if the queue is empty, false otherwise.
+    Notes:
+
+    You must use only standard operations of a stack, which means only push to top, peek/pop from top, size, and is empty operations are valid.
+
+    UNDERSTAND
+    We are only using two stacks
+    Operations can happen at any given time in any order
+
+    MATCH
+    We can only use two stacks to mimic a queue
+
+    PLAN
+    Push -- if both stacks are empty -into stack 1 until a different operation is request
+         -- if only stack 1 is empty - do the reverse -- move items from stack 2 to stack 1
+            push new item(s)
+
+    Pop -- pop from stack 1 and push to stack 2
+            when stack 1 is empty
+                pop from stack 2
+    Peek -- peek from stack 2
+
+    empty -- if stack 2 is empty -- return true
+          --else return false
+
+
+     IMPLEMENT
+
+
 
 
 
