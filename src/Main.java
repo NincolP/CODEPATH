@@ -201,6 +201,25 @@ public class Main {
         System.out.println(minStack.getMin());*/
 
 
+        MyQueue myQ = new MyQueue();
+
+        myQ.push(9);
+        myQ.push(8);
+        myQ.push(10);
+
+        myQ.pop();
+        myQ.pop();
+        myQ.pop();
+
+
+        myQ.push(5);
+        //myQ.pop();
+
+
+        System.out.println(myQ.peek());
+
+        System.out.println(myQ.empty());
+
 
 
 
