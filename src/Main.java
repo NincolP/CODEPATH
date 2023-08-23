@@ -873,7 +873,15 @@ IMPLEMENT:
 
 
 
+     REVIEW
+     tested for accuracy of for all methods
 
+     EVALUATE
+     SPACE COMPLEXITY
+     O(N)
+
+     TIME COMPLEXITY
+     O(1) AS WE ARE ALWAYS GOING TO TOP OF STACK FOR PEEK AND POP, AS WELL AS IS EMPTY
 
      */
 
