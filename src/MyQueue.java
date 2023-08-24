@@ -11,11 +11,12 @@ public class MyQueue {
         stack2 = new Stack<>();
     }
 
-
+    //Pushing new items into stack 1
     public void push(int n) {
        stack1.push(n);
     }
 
+    //Popping items from stack 2 after they have move from stack 1 to stack 2
     public void pop() {
         if (stack2.isEmpty()) {
             while(!stack1.isEmpty()) {
@@ -27,6 +28,7 @@ public class MyQueue {
         }
     }
 
+    //Peeking top of the stack from stack 2
     public int peek() {
 
         if (stack2.isEmpty()) {
@@ -41,6 +43,7 @@ public class MyQueue {
             return 0;
     }
 
+    //See if stack 2 is empty
     public boolean empty() {
         return stack2.isEmpty();
     }
