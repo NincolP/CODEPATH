@@ -201,7 +201,7 @@ public class Main {
         System.out.println(minStack.getMin());*/
 
 
-        MyQueue myQ = new MyQueue();
+        /*MyQueue myQ = new MyQueue();
 
         myQ.push(9);
         myQ.push(8);
@@ -211,14 +211,43 @@ public class Main {
         myQ.pop();
         myQ.pop();
 
-
         myQ.push(5);
-        //myQ.pop();
-
 
         System.out.println(myQ.peek());
 
-        System.out.println(myQ.empty());
+        System.out.println(myQ.empty());*/
+
+
+
+        //******************************SECTION 2 *********************************************************************
+
+
+       MyLinkedList myList = new MyLinkedList();
+
+        myList.insertFirst(4);
+        myList.insertFirst(4);
+        myList.insertFirst(4);
+        myList.insertFirst(3);
+        myList.insertFirst(2);
+        myList.insertFirst(2);
+        myList.insertFirst(1);
+        myList.insertFirst(1);
+        myList.insertFirst(1);
+        myList.insertFirst(1);
+
+        myList.displayList();
+        myList.removeDup();
+        myList.displayList();
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -884,6 +913,19 @@ IMPLEMENT:
      O(1) AS WE ARE ALWAYS GOING TO TOP OF STACK FOR PEEK AND POP, AS WELL AS IS EMPTY
 
      */
+
+
+
+
+    //**********************SECTION 2 **********************************************************************************
+
+    /*
+    PROBLEM 1 IMPLEMENTATION
+    Remove Duplicates from Sorted List (Linked list)
+     */
+
+
+
 
 
 
