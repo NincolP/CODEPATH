@@ -35,7 +35,7 @@ public class MyLinkedList {
         }
     }
 
-    
+
     public void displayList()      // display the list
     {
         System.out.println();
