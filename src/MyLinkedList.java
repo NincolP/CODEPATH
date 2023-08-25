@@ -25,7 +25,7 @@ public class MyLinkedList {
     public void removeDup () {
         Node current = first;
 
-        while(current.next != null) {
+        while(current != null && current.next != null) {
             while(current.data == current.next.data) {
                 current.next = current.next.next;
             }
@@ -35,8 +35,7 @@ public class MyLinkedList {
         }
     }
 
-
-
+    
     public void displayList()      // display the list
     {
         System.out.println();

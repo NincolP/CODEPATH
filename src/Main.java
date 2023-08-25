@@ -224,6 +224,11 @@ public class Main {
 
        MyLinkedList myList = new MyLinkedList();
 
+        myList.insertFirst(9);
+        myList.insertFirst(9);
+        myList.insertFirst(7);
+        myList.insertFirst(5);
+        myList.insertFirst(4);
         myList.insertFirst(4);
         myList.insertFirst(4);
         myList.insertFirst(4);
@@ -238,6 +243,17 @@ public class Main {
         myList.displayList();
         myList.removeDup();
         myList.displayList();
+
+        MyLinkedList myList2 = new MyLinkedList();
+        //myList2.insertFirst(10);
+        //myList2.insertFirst(10);
+        //myList2.insertFirst(10);
+        //myList2.insertFirst(10);
+        //myList2.insertFirst(10);
+
+        myList2.displayList();
+        myList2.removeDup();
+
 
 
 
