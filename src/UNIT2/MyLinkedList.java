@@ -1,3 +1,7 @@
+package UNIT2;
+
+import UNIT1.Node;
+
 public class MyLinkedList {
 
     private Node first;            // ref to first link on list

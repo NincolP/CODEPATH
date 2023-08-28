@@ -1,3 +1,5 @@
+package UNIT1;
+
 import java.util.*;
 
 public class Main {
@@ -159,7 +161,7 @@ public class Main {
         System.out.println(validParenthesis(s3));
         System.out.println(validParenthesis(s4));*/
 
-        /*KthLargest obj = new KthLargest(3, new int[]{4, 5, 8, 2});
+        /*UNIT1.KthLargest obj = new UNIT1.KthLargest(3, new int[]{4, 5, 8, 2});
         obj.displayQ();
 
         System.out.println(obj.add(3));
@@ -171,13 +173,13 @@ public class Main {
 
        /* int [] recentCallsTimes = {1, 2, 4000};
 
-        RecentCounter recentCalls = new RecentCounter();
+        UNIT1.RecentCounter recentCalls = new UNIT1.RecentCounter();
 
         for(int i = 0; i < recentCallsTimes.length; ++i) {
             System.out.println(recentCalls.ping(recentCallsTimes[i]));
         }*/
 
-        /*MinStack minStack = new MinStack();
+        /*UNIT1.MinStack minStack = new UNIT1.MinStack();
 
         minStack.push(5);
         minStack.push(8);
@@ -201,7 +203,7 @@ public class Main {
         System.out.println(minStack.getMin());*/
 
 
-        /*MyQueue myQ = new MyQueue();
+        /*UNIT1.MyQueue myQ = new UNIT1.MyQueue();
 
         myQ.push(9);
         myQ.push(8);
@@ -222,37 +224,7 @@ public class Main {
         //******************************SECTION 2 *********************************************************************
 
 
-       MyLinkedList myList = new MyLinkedList();
 
-        myList.insertFirst(9);
-        myList.insertFirst(9);
-        myList.insertFirst(7);
-        myList.insertFirst(5);
-        myList.insertFirst(4);
-        myList.insertFirst(4);
-        myList.insertFirst(4);
-        myList.insertFirst(4);
-        myList.insertFirst(3);
-        myList.insertFirst(2);
-        myList.insertFirst(2);
-        myList.insertFirst(1);
-        myList.insertFirst(1);
-        myList.insertFirst(1);
-        myList.insertFirst(1);
-
-        myList.displayList();
-        myList.removeDup();
-        myList.displayList();
-
-        MyLinkedList myList2 = new MyLinkedList();
-        //myList2.insertFirst(10);
-        //myList2.insertFirst(10);
-        //myList2.insertFirst(10);
-        //myList2.insertFirst(10);
-        //myList2.insertFirst(10);
-
-        myList2.displayList();
-        myList2.removeDup();
 
 
 
@@ -726,8 +698,8 @@ IMPLEMENT:
     PROBLEM 2
     Design a class to find the kth largest element in a stream. Note that it is the kth largest element in the sorted order, not the kth distinct element.
 
-    Implement KthLargest class:
-    KthLargest(int k, int[] nums): Initializes the object with the integer k and the stream of integers nums.
+    Implement UNIT1.KthLargest class:
+    UNIT1.KthLargest(int k, int[] nums): Initializes the object with the integer k and the stream of integers nums.
     int add(int val): Appends the integer val to the stream and returns the element representing
     the kth largest element in the stream.
 
@@ -741,7 +713,7 @@ IMPLEMENT:
 
 
     PLAN
-    Create a Class KthLargest
+    Create a Class UNIT1.KthLargest
 
     Create a Heap by using Java Priority Queue which uses min Heap
 
@@ -755,18 +727,18 @@ IMPLEMENT:
         and will return the kth element
 
     IMPLEMENT
-    THIS WAS IMPLEMENTED IN THE KthLargest class and was tested in the Main Class
+    THIS WAS IMPLEMENTED IN THE UNIT1.KthLargest class and was tested in the UNIT1.Main Class
      */
 
 
     /*
     Problem #3 - NUmber of recent calls
 
-    You have a RecentCounter class which counts the number of recent requests within a certain time frame.
+    You have a UNIT1.RecentCounter class which counts the number of recent requests within a certain time frame.
 
-    Implement the RecentCounter class:
+    Implement the UNIT1.RecentCounter class:
 
-    RecentCounter() Initializes the counter with zero recent requests.
+    UNIT1.RecentCounter() Initializes the counter with zero recent requests.
     int ping(int t) Adds a new request at time t, where t represents some time in milliseconds, and returns the number
     of requests that has happened in the past 3000 milliseconds (including the new request).
     Specifically, return the number of requests that have happened in the inclusive range [t - 3000, t].
@@ -788,7 +760,7 @@ IMPLEMENT:
 
 
     IMPLEMENT
-    SEE RecentCounter class
+    SEE UNIT1.RecentCounter class
 
     REVIEW
     Tracing to the code if we add a time of 3000 and other times with lower values, all those pings will count to the
@@ -808,8 +780,8 @@ IMPLEMENT:
     PROBLEM 4: Min stack
     Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.
 
-    Implement the MinStack class:
-    MinStack() initializes the stack object.
+    Implement the UNIT1.MinStack class:
+    UNIT1.MinStack() initializes the stack object.
     void push(int val) pushes the element val onto the stack.
     void pop() removes the element on the top of the stack.
     int top() gets the top element of the stack.
@@ -883,7 +855,7 @@ IMPLEMENT:
     Implement a first in first out (FIFO) queue using only two stacks. The implemented queue should support all the functions of a normal
     queue (push, peek, pop, and empty).
 
-    Implement the MyQueue class:
+    Implement the UNIT1.MyQueue class:
 
     void push(int x) Pushes element x to the back of the queue.
     int pop() Removes the element from the front of the queue and returns it.
