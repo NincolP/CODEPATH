@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args) {
 
 
-        MyLinkedList myList = new MyLinkedList();
+       MyLinkedList myList = new MyLinkedList();
 
         myList.insertFirst(9);
         myList.insertFirst(9);
@@ -28,11 +28,7 @@ public class Main {
         myList.displayList();
 
         MyLinkedList myList2 = new MyLinkedList();
-        //myList2.insertFirst(10);
-        //myList2.insertFirst(10);
-        //myList2.insertFirst(10);
-        //myList2.insertFirst(10);
-        //myList2.insertFirst(10);
+
 
         myList2.displayList();
         myList2.removeDup();
