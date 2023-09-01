@@ -5,6 +5,7 @@ out/
 
 
 
+
 ### Eclipse ###
 .apt_generated
 .classpath
@@ -29,6 +30,11 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+
+### files to ignore ###
+
+
 
 
 
