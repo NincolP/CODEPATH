@@ -3,7 +3,7 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 
-
+/pleaseIgnore
 
 
 ### Eclipse ###
@@ -32,7 +32,7 @@ bin/
 .DS_Store
 
 
-### files to ignore ###
+
 
 
 
