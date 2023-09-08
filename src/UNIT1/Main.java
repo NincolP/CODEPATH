@@ -52,6 +52,10 @@ public class Main {
         //System.out.println(firstLetterToRepeat(s));
         //System.out.println(firstLetterToRepeat(g));
 
+        //String g = "ab  ccd";
+
+        //System.out.println(firstLetterToRepeat(g));
+
         /*
     Similar problem:
     Given an integer array nums, return true if any value appears at least twice in the array,
@@ -249,6 +253,20 @@ public class Main {
         //if(!repeats)
         System.out.println("no character repeats");
         return ' ';
+    }
+
+    //Using a Hashset may be better than using a Hashmap
+    public static char firstLetterToRepeat2 (String s) {
+        HashSet<Character> hSet  = new HashSet<>();
+        for (int i = 0; i < s.length(); i++) {
+            if(hSet.contains(s.charAt(i))) {
+                return s.charAt(i);
+            }
+            hSet.add(s.charAt(i));
+        }
+        System.out.println("No duplicate characters");
+        return '*';
+
     }
 
     //PROBLEM 1 ANALYSIS
