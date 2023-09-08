@@ -52,9 +52,9 @@ public class Main {
         //System.out.println(firstLetterToRepeat(s));
         //System.out.println(firstLetterToRepeat(g));
 
-        //String g = "ab  ccd";
+        //String g = "ab cd";
 
-        //System.out.println(firstLetterToRepeat(g));
+        //System.out.println(firstLetterToRepeat2(g));
 
         /*
     Similar problem:
