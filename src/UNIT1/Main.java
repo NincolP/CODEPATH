@@ -241,7 +241,7 @@ public class Main {
         list3.add(4);
         list3.add(4);
 
-        
+
         System.out.println(singleNumber(list));
         System.out.println(singleNumber(list2));
         System.out.println(singleNumber(list3));
