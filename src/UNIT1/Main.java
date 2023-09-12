@@ -232,21 +232,19 @@ public class Main {
         list2.add(1);
         list2.add(2);
 
+        List<Integer> list3 = new ArrayList<>();
+        list3.add(1);
+        list3.add(1);
+        list3.add(2);
+        list3.add(2);
+        list3.add(3);
+        list3.add(4);
+        list3.add(4);
 
+        
         System.out.println(singleNumber(list));
         System.out.println(singleNumber(list2));
-
-
-
-
-
-
-
-
-
-
-
-
+        System.out.println(singleNumber(list3));
 
 
 
