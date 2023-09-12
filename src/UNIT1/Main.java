@@ -220,22 +220,9 @@ public class Main {
         System.out.println(myQ.empty());*/
 
 
-        List<Integer> sNum1 = new ArrayList<>();
-        sNum1.add(2);
-        sNum1.add(2);
-        sNum1.add(1);
-        
-        List<Integer> sNum2 = new ArrayList<>();
-        sNum2.add(4);
-        sNum2.add(1);
-        sNum2.add(2);
-        sNum2.add(1);
-        sNum2.add(2);
 
 
-        System.out.println(singleNumber(sNum1));
 
-        System.out.println(singleNumber(sNum2));
 
 
 
@@ -929,28 +916,9 @@ IMPLEMENT:
 
 
 
-//Assignment
-
-    public static int singleNumber(List<Integer> nums) {
-
-      HashMap<Integer, Integer> set = new HashMap<>();
-      int single = 0;
 
 
-      for(int i = 0; i < nums.size(); i++) {
 
-          if(set.containsValue(1))
-              set.remove(nums.get(i));
-          else {
-              set.put(nums.get(i), 1);
-              single = i;
-          }
-
-
-      }
-      return nums.get(single);
-
-    }
 
 
 
