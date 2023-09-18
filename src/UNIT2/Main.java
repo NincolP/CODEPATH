@@ -23,15 +23,33 @@ public class Main {
         myList.insertFirst(1);
         myList.insertFirst(1);
 
-        myList.displayList();
-        myList.removeDup();
-        myList.displayList();
+        //myList.displayList();
+        //myList.removeDup();
+        //myList.displayList();
 
-        MyLinkedList myList2 = new MyLinkedList();
+        //MyLinkedList myList2 = new MyLinkedList();
 
 
-        myList2.displayList();
-        myList2.removeDup();
+        //myList2.displayList();
+        //myList2.removeDup();
+
+
+        //PROBLEM 3 IMPLEMENTATION
+
+       MyLinkedList original = new MyLinkedList();
+
+       original.insertFirst(5);
+       original.insertFirst(4);
+       original.insertFirst(3);
+       original.insertFirst(2);
+       original.insertFirst(1);
+       original.displayList();
+
+       MyLinkedList reverse = new MyLinkedList();
+       original.reverse(reverse);
+
+       reverse.displayList();
+
     }
 
 
@@ -79,5 +97,40 @@ public class Main {
      */
 
 
- 
+
+    /*
+    Problem 3 : Given the head of a singly linked list, reverse the list, and return the reversed list.
+
+    UNDERSTAND
+    -Are we creating a new list that is the reverse of the initial list. Are we allow to use a additional data structure
+     in other words , is space complexity of O(N) acceptable
+
+    MAP
+    We can use another link list that will take element from the original linkedList
+
+    PLAN
+    We are going to take each element in the original list and put if in the new list, therefore creating a reverse list
+
+    IMPLEMENT
+    Implemented in MyLinkedList class
+
+    REVIEW
+    This was tested
+
+    EVALUATE
+    TIME COMPLEXITY
+    O(N) we are using the reverse method that is O(N) visit all the nodes from the original list to populate the new
+    reverse list. We also have to display the new reverse list, which is also O(N)
+    so O(N) + O(N) = 2O(N) but we eliminate the constants, and we end up with a time complexity of O(N)
+
+    SPACE COMPLEXITY
+    O(N) because we need an extra data structure that has to store (N) elements
+
+
+     */
+
+
+
+
+
 }

@@ -51,6 +51,16 @@ public class MyLinkedList {
         System.out.println();// spacing between lines for multiple calls of this method
     }
 
+    public void reverse (MyLinkedList r) {
+
+        Link current = first;
+        while(current != null) {
+            r.insertFirst(current.data);
+            current = current.next;
+        }
+
+    }
+
 
 
 
