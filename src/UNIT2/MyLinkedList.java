@@ -1,10 +1,8 @@
 package UNIT2;
 
-import UNIT1.Node;
-
 public class MyLinkedList {
 
-    private Node first;            // ref to first link on list
+    private Link first;            // ref to first link on list
 
     // -------------------------------------------------------------
     public MyLinkedList()              // constructor
@@ -13,13 +11,14 @@ public class MyLinkedList {
     }
     // -------------------------------------------------------------
     public boolean isEmpty() {
+
         return(first ==null);
     }   //Returns true if first is null, meaning it does not point
     //to anything yet
 
     public void insertFirst(int value)
     {                           // make new link
-        Node newLink = new Node(value);
+        Link newLink = new Link(value);
         newLink.next = first;       // it points to old first link
         first = newLink;            // now first points to this
     }
@@ -27,7 +26,7 @@ public class MyLinkedList {
 
 
     public void removeDup () {
-        Node current = first;
+        Link current = first;
 
         while(current != null && current.next != null) {
             while(current.data == current.next.data) {
@@ -43,13 +42,13 @@ public class MyLinkedList {
     public void displayList()      // display the list
     {
         System.out.println();
-        Node current = first;       // start at beginning of list
+        Link current = first;       // start at beginning of list
         while(current != null)      // until end of list,
         {
-            current.displayNode();   // print data
+            current.displayLink();   // print data
             current = current.next;  // move to next link
         }
-        System.out.println("");
+        System.out.println();// spacing between lines for multiple calls of this method
     }
 
 
