@@ -4,10 +4,14 @@ public class MyLinkedList {
 
     private Link first;            // ref to first link on list
 
+    private Link last;
+
+
     // -------------------------------------------------------------
     public MyLinkedList()              // constructor
     {
         first = null;               // no links on list yet
+
     }
     // -------------------------------------------------------------
     public boolean isEmpty() {
@@ -51,14 +55,25 @@ public class MyLinkedList {
         System.out.println();// spacing between lines for multiple calls of this method
     }
 
-    public void reverse (MyLinkedList r) {
-
+    public void reverse () {
         Link current = first;
-        while(current != null) {
-            r.insertFirst(current.data);
+
+        //This while loop sets the previous node for each node
+        while(current.next != null) {
+            current.next.previous = current;
             current = current.next;
+
+            if(current.next == null) {
+                last = current;
+            }
         }
 
+        Link newCurrent = last ;
+        //This while loop prints the nodes in reverse
+        while(newCurrent != null) {
+            System.out.print(newCurrent.data + " ");
+            newCurrent = newCurrent.previous;
+        }
     }
 
 

@@ -45,10 +45,10 @@ public class Main {
        original.insertFirst(1);
        original.displayList();
 
-       MyLinkedList reverse = new MyLinkedList();
-       original.reverse(reverse);
 
-       reverse.displayList();
+       original.reverse();
+
+       //original.displayList();
 
     }
 
@@ -104,12 +104,23 @@ public class Main {
     UNDERSTAND
     -Are we creating a new list that is the reverse of the initial list. Are we allow to use a additional data structure
      in other words , is space complexity of O(N) acceptable
+            NOT ACCEPTABLE AS SPACE COMPLEXITY HAS TO BE O(1)
 
     MAP
-    We can use another link list that will take element from the original linkedList
+    We have to use the same LinkedList
 
     PLAN
-    We are going to take each element in the original list and put if in the new list, therefore creating a reverse list
+    We are going to iterate over the LinkedList and set up each node previous so that we can go backwards on the
+    LinkedList.
+        While the node is not the last note: node != null
+        make current.next the current
+        make current the previous
+
+        move along by making current = current.next;
+        Once we get to the end of the list, marked the last Node as last
+
+       Then we will use a second while loop to go from last note backwards to the first
+
 
     IMPLEMENT
     Implemented in MyLinkedList class
@@ -126,7 +137,7 @@ public class Main {
     SPACE COMPLEXITY
     O(N) because we need an extra data structure that has to store (N) elements
 
-
+    //This needs to be updated as space complexity must be O(1)
      */
 
 
