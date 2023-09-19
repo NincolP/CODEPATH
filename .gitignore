@@ -5,6 +5,8 @@ out/
 
 /pleaseIgnore
 
+.idea
+
 
 ### Eclipse ###
 .apt_generated

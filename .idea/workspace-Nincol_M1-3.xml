@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f1741cc6-98e9-4786-800e-2024978c1c04" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/-DESKTOP-Q2L0QG3.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/-DESKTOP-Q2L0QG3.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/CODEPATH.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CODEPATH.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc-DESKTOP-Q2L0QG3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc-DESKTOP-Q2L0QG3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc-Nincol_M1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc-Nincol_M1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules-DESKTOP-Q2L0QG3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules-DESKTOP-Q2L0QG3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace-DESKTOP-Q2L0QG3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace-DESKTOP-Q2L0QG3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace-Nincol_M1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace-Nincol_M1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CODEPATH.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CODEPATH.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UNIT1/KthLargest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UNIT1/KthLargest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UNIT1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UNIT1/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UNIT1/MinStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UNIT1/MinStack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UNIT1/MyQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UNIT1/MyQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UNIT1/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UNIT1/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UNIT1/RecentCounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UNIT1/RecentCounter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UNIT2/Link.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UNIT2/Link.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UNIT2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UNIT2/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UNIT2/MyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UNIT2/MyLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/textFile" beforeDir="false" afterPath="$PROJECT_DIR$/textFile" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2VIg7iWVD5FmFUZgDOAwPwScx6X" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/nincol/Library/CloudStorage/OneDrive-Personal/CODEPATH&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f1741cc6-98e9-4786-800e-2024978c1c04" name="Changes" comment="" />
+      <created>1694528842088</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1694528842088</updated>
+    </task>
+    <servers />
+  </component>
+</project>
