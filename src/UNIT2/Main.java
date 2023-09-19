@@ -130,18 +130,12 @@ public class Main {
 
     EVALUATE
     TIME COMPLEXITY
-    O(N) we are using the reverse method that is O(N) visit all the nodes from the original list to populate the new
-    reverse list. We also have to display the new reverse list, which is also O(N)
+    O(N) we are using the reverse method that is O(N) visit all the nodes from the original list to mark previous nodes.
+    We also have to display the new reverse list, which is also O(N)
     so O(N) + O(N) = 2O(N) but we eliminate the constants, and we end up with a time complexity of O(N)
 
     SPACE COMPLEXITY
-    O(N) because we need an extra data structure that has to store (N) elements
-
-    //This needs to be updated as space complexity must be O(1)
-     */
-
-
-
-
+    O(1) because this needs to be done in place without the use of an additional data structure.
+    */
 
 }
