@@ -6,6 +6,8 @@ public class MyLinkedList {
 
     private Link last;
 
+    private int size;
+
 
     // -------------------------------------------------------------
     public MyLinkedList()              // constructor
@@ -25,6 +27,8 @@ public class MyLinkedList {
         Link newLink = new Link(value);
         newLink.next = first;       // it points to old first link
         first = newLink;            // now first points to this
+
+        size++;
     }
 
 
@@ -47,11 +51,13 @@ public class MyLinkedList {
     {
         System.out.println();
         Link current = first;       // start at beginning of list
+        System.out.print("[");
         while(current != null)      // until end of list,
         {
             current.displayLink();   // print data
             current = current.next;  // move to next link
         }
+        System.out.print("]");
         System.out.println();// spacing between lines for multiple calls of this method
     }
 
@@ -74,6 +80,62 @@ public class MyLinkedList {
             System.out.print(newCurrent.data + " ");
             newCurrent = newCurrent.previous;
         }
+    }
+
+    public void removeValue(int v) {
+
+        System.out.println("size is " + size);
+
+        Link current = first ;
+        Link previous;
+
+
+       for(int i = 0; i <= size; ++i) {
+
+           //This takes care of am emmpty list
+           if(size == 0)
+               break;
+            //This take care of the first item being equal to value
+           // and there is a next value that is not null to link as first
+           if(first.data == v && first.next != null) {
+               first = first.next;
+
+               System.out.println("first");
+           }
+            // this take care of when the only item left is also the value
+           //that needs to be deleted.
+           else if (first.data == v) {
+               first = null;
+               System.out.println("First is the only one");
+               break;
+           }
+           // This take care of all other cases where there are items
+           //before and after that do not have the value we are looking for
+           else if (current.next != null) {
+               previous = current;
+               current = current.next;
+
+               //this take care of the first test case where the value is in the middle
+               //and even at the end
+           if (current.data == v) {
+
+                   previous.next = current.next;
+                   System.out.println("current");
+
+               }
+           }
+
+
+
+
+
+
+           /*else if(current == null && previous.data == v) {
+
+               first = null;
+           }*/
+        }
+
     }
 
 

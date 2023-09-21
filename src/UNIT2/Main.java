@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args) {
 
 
-       MyLinkedList myList = new MyLinkedList();
+      /* MyLinkedList myList = new MyLinkedList();
 
         myList.insertFirst(9);
         myList.insertFirst(9);
@@ -21,7 +21,7 @@ public class Main {
         myList.insertFirst(1);
         myList.insertFirst(1);
         myList.insertFirst(1);
-        myList.insertFirst(1);
+        myList.insertFirst(1);*/
 
         //myList.displayList();
         //myList.removeDup();
@@ -36,7 +36,7 @@ public class Main {
 
         //PROBLEM 3 IMPLEMENTATION
 
-       MyLinkedList original = new MyLinkedList();
+      /* MyLinkedList original = new MyLinkedList();
 
        original.insertFirst(5);
        original.insertFirst(4);
@@ -46,9 +46,50 @@ public class Main {
        original.displayList();
 
 
-       original.reverse();
+       original.reverse();*/
 
        //original.displayList();
+
+
+       MyLinkedList j = new MyLinkedList();
+        j.insertFirst(6);
+        j.insertFirst(5);
+        j.insertFirst(4);
+        j.insertFirst(3);
+        j.insertFirst(6);
+        j.insertFirst(2);
+        j.insertFirst(1);
+
+        j.displayList();
+
+        j.removeValue(6);
+
+        j.displayList();
+
+        //case where we need to remove first and all values need to be removed
+        MyLinkedList k = new MyLinkedList();
+        k.insertFirst(7);
+        k.insertFirst(7);
+        k.insertFirst(7);
+        k.insertFirst(7);
+
+
+        k.displayList();
+
+        k.removeValue(7);
+
+        k.displayList();
+
+        MyLinkedList zero = new MyLinkedList();
+
+        zero.displayList();
+
+        zero.removeValue(8);
+
+        zero.displayList();
+
+
+
 
     }
 
@@ -137,5 +178,25 @@ public class Main {
     SPACE COMPLEXITY
     O(1) because this needs to be done in place without the use of an additional data structure.
     */
+
+    /*
+    Problem 5
+    Given the head of a linked list and an integer val, remove all the nodes of the linked list that has
+    Node.val == val, and return the new head.
+
+    UNDERSTAND
+    We are an integer value, and we have to remove all the nodes that have that value
+    Q - What if the value is not found - what should we return?
+        Since we are returning the new head we would be able to return the same LinkedList
+
+    MAP
+    We need to add a new method in the MyLinkedList class to remove nodes or links
+
+    PLAN
+    -Create a new method call remove or delete
+    -While current node is not null
+        if the item is found
+            then link current to the following next : current. next will be current.next.next
+     */
 
 }
