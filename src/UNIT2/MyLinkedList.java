@@ -49,7 +49,6 @@ public class MyLinkedList {
 
     public void displayList()      // display the list
     {
-        System.out.println();
         Link current = first;       // start at beginning of list
         System.out.print("[");
         while(current != null)      // until end of list,
@@ -59,6 +58,7 @@ public class MyLinkedList {
         }
         System.out.print("]");
         System.out.println();// spacing between lines for multiple calls of this method
+        System.out.println();
     }
 
     public void reverse () {
@@ -83,31 +83,26 @@ public class MyLinkedList {
     }
 
     public void removeValue(int v) {
-
-        System.out.println("size is " + size);
-
         Link current = first ;
         Link previous;
 
+       for(int i = 0; i < size; ++i) {
 
-       for(int i = 0; i <= size; ++i) {
-
-           //This takes care of am emmpty list
+           //This takes care of am empty list
            if(size == 0)
                break;
-            //This take care of the first item being equal to value
-           // and there is a next value that is not null to link as first
+
+            //This take care of the first item being equal to value and there is a next value that
+           //is not null to link as first
            if(first.data == v && first.next != null) {
                first = first.next;
-
-               System.out.println("first");
+               //System.out.println("first");
            }
-            // this take care of when the only item left is also the value
-           //that needs to be deleted.
+            //This takes care of when the only item left is also the value that needs to be deleted.
            else if (first.data == v) {
                first = null;
-               System.out.println("First is the only one");
-               break;
+               //System.out.println("First is the only one");
+               //break;
            }
            // This take care of all other cases where there are items
            //before and after that do not have the value we are looking for
@@ -118,25 +113,16 @@ public class MyLinkedList {
                //this take care of the first test case where the value is in the middle
                //and even at the end
            if (current.data == v) {
-
                    previous.next = current.next;
-                   System.out.println("current");
+                   //System.out.println("current");
 
                }
            }
-
-
-
-
-
-
-           /*else if(current == null && previous.data == v) {
-
-               first = null;
-           }*/
         }
 
     }
+
+
 
 
 

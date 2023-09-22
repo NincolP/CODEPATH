@@ -60,10 +60,11 @@ public class Main {
         j.insertFirst(2);
         j.insertFirst(1);
 
+        System.out.println("This is the list before any changes");
         j.displayList();
-
         j.removeValue(6);
 
+        System.out.println("And this is the list after deleting the value given");
         j.displayList();
 
         //case where we need to remove first and all values need to be removed
@@ -73,19 +74,21 @@ public class Main {
         k.insertFirst(7);
         k.insertFirst(7);
 
-
+        System.out.println("This is the list before any changes");
         k.displayList();
-
         k.removeValue(7);
 
+        System.out.println("And this is the list after deleting the value given");
         k.displayList();
 
         MyLinkedList zero = new MyLinkedList();
 
+
+        System.out.println("This is the list before any changes");
         zero.displayList();
 
         zero.removeValue(8);
-
+        System.out.println("And this is the list after deleting the value given");
         zero.displayList();
 
 
