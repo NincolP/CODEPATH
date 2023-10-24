@@ -49,9 +49,9 @@ public class Main {
        original.reverse();*/
 
        //original.displayList();
-
-
-       MyLinkedList j = new MyLinkedList();
+        //--------------------------------------------------------------------------------------------------------------
+        //first case
+        MyLinkedList j = new MyLinkedList();
         j.insertFirst(6);
         j.insertFirst(5);
         j.insertFirst(4);
@@ -62,11 +62,12 @@ public class Main {
 
         System.out.println("This is the list before any changes");
         j.displayList();
-        j.removeValue(6);
+
 
         System.out.println("And this is the list after deleting the value given");
-        j.displayList();
+        j.displayWithHead(j.removeValue(1));
 
+        //--------------------------------------------------------------------------------------------------------------
         //case where we need to remove first and all values need to be removed
         MyLinkedList k = new MyLinkedList();
         k.insertFirst(7);
@@ -76,24 +77,19 @@ public class Main {
 
         System.out.println("This is the list before any changes");
         k.displayList();
-        k.removeValue(7);
 
         System.out.println("And this is the list after deleting the value given");
-        k.displayList();
+        k.displayWithHead(k.removeValue(7));
 
+        //--------------------------------------------------------------------------------------------------------------
+        //Case with empty list
         MyLinkedList zero = new MyLinkedList();
-
-
         System.out.println("This is the list before any changes");
         zero.displayList();
 
-        zero.removeValue(8);
+
         System.out.println("And this is the list after deleting the value given");
-        zero.displayList();
-
-
-
-
+        zero.displayWithHead(zero.removeValue(1));
     }
 
 

@@ -1,5 +1,7 @@
 package UNIT2;
 
+import java.security.PublicKey;
+
 public class MyLinkedList {
 
     private Link first;            // ref to first link on list
@@ -14,6 +16,10 @@ public class MyLinkedList {
     {
         first = null;               // no links on list yet
 
+    }
+
+    public  MyLinkedList(Link head) {
+        first = head;
     }
     // -------------------------------------------------------------
     public boolean isEmpty() {
@@ -54,6 +60,20 @@ public class MyLinkedList {
         while(current != null)      // until end of list,
         {
             current.displayLink();   // print data
+            System.out.print("-->");
+            current = current.next;  // move to next link
+        }
+        System.out.print("]");
+        System.out.println();// spacing between lines for multiple calls of this method
+        System.out.println();
+    }
+
+    public void displayWithHead(Link current) {
+        System.out.print("[");
+        while(current != null)      // until end of list,
+        {
+            current.displayLink();   // print data
+            System.out.print("-->");
             current = current.next;  // move to next link
         }
         System.out.print("]");
@@ -82,47 +102,18 @@ public class MyLinkedList {
         }
     }
 
-    public void removeValue(int v) {
-        Link current = first ;
-        Link previous;
-
-       for(int i = 0; i < size; ++i) {
-
-           //This takes care of am empty list
-           if(size == 0)
-               break;
-
-            //This take care of the first item being equal to value and there is a next value that
-           //is not null to link as first
-           if(first.data == v && first.next != null) {
-               first = first.next;
-               //System.out.println("first");
-           }
-            //This takes care of when the only item left is also the value that needs to be deleted.
-           else if (first.data == v) {
-               first = null;
-               //System.out.println("First is the only one");
-               //break;
-           }
-           // This take care of all other cases where there are items
-           //before and after that do not have the value we are looking for
-           else if (current.next != null) {
-               previous = current;
+    public Link removeValue(int v) {
+       Link dummy = new Link(0);
+       dummy.next = first;
+       Link current = dummy;
+       while (current.next!= null) {
+           if (current.next.data == v)
+               current.next = current.next.next;
+           else
                current = current.next;
-
-               //this take care of the first test case where the value is in the middle
-               //and even at the end
-           if (current.data == v) {
-                   previous.next = current.next;
-                   //System.out.println("current");
-
-               }
-           }
-        }
-
+       }
+        return dummy.next;
     }
-
-
 
 
 

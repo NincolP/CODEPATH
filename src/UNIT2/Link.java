@@ -2,10 +2,8 @@ package UNIT2;
 
 public class Link {
 
-
     public Integer data;
     public Link next;
-
     public Link previous;
 
 
