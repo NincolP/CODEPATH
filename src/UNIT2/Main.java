@@ -36,7 +36,7 @@ public class Main {
 
         //PROBLEM 3 IMPLEMENTATION
 
-      /* MyLinkedList original = new MyLinkedList();
+      MyLinkedList original = new MyLinkedList();
 
        original.insertFirst(5);
        original.insertFirst(4);
@@ -46,12 +46,12 @@ public class Main {
        original.displayList();
 
 
-       original.reverse();*/
 
-       //original.displayList();
+
+      original.displayWithHead(original.reverse());
         //--------------------------------------------------------------------------------------------------------------
         //first case
-        MyLinkedList j = new MyLinkedList();
+       /* MyLinkedList j = new MyLinkedList();
         j.insertFirst(6);
         j.insertFirst(5);
         j.insertFirst(4);
@@ -89,7 +89,7 @@ public class Main {
 
 
         System.out.println("And this is the list after deleting the value given");
-        zero.displayWithHead(zero.removeValue(1));
+        zero.displayWithHead(zero.removeValue(1));*/
     }
 
 

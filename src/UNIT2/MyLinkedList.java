@@ -52,9 +52,8 @@ public class MyLinkedList {
         }
     }
 
-
-    public void displayList()      // display the list
-    {
+    //Display the list
+    public void displayList()      {
         Link current = first;       // start at beginning of list
         System.out.print("[");
         while(current != null)      // until end of list,
@@ -81,25 +80,24 @@ public class MyLinkedList {
         System.out.println();
     }
 
-    public void reverse () {
+    public Link reverse () {
+        //Initiate previous and current nodes. Initially previous is initiated to point to null
+        Link previous = null;
         Link current = first;
 
-        //This while loop sets the previous node for each node
-        while(current.next != null) {
-            current.next.previous = current;
-            current = current.next;
+        while(current != null) {
+            //Need to capture the next node before we point current.next to previous
+            Link nextNode = current.next;
 
-            if(current.next == null) {
-                last = current;
-            }
-        }
+            //Pointing next backwards
+            current.next = previous;
 
-        Link newCurrent = last ;
-        //This while loop prints the nodes in reverse
-        while(newCurrent != null) {
-            System.out.print(newCurrent.data + " ");
-            newCurrent = newCurrent.previous;
+            //Move nodes forward
+            previous = current;
+            current = nextNode;
         }
+        //previous will end up being the new first at the end of the while loop. THis is what we are returning.
+        return previous;
     }
 
     public Link removeValue(int v) {
@@ -114,11 +112,5 @@ public class MyLinkedList {
        }
         return dummy.next;
     }
-
-
-
-
-
-
 
 }
