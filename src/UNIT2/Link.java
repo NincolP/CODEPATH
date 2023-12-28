@@ -11,8 +11,7 @@ public class Link {
         data = i;
     }
 
-    public void displayLink()      // display Link data
-    {
+    public void displayLink()  {    // display Link data
         System.out.print(data);
     }
 
