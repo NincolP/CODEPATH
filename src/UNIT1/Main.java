@@ -936,6 +936,50 @@ IMPLEMENT:
     }
 
 
+    /*
+    From Leetcode
+     */
+
+
+        public static boolean isAnagram(String s, String t) {
+
+            HashMap<Character, Integer> map = new HashMap <Character, Integer>();
+
+            if(s.length() != t.length())
+                return false;
+            else {
+                Integer val = 1;
+
+                for(int i = 0; i < s.length(); i++) {
+                    Character c = s.charAt(i);
+                    if(map.containsKey(c))
+                        map.put(c, map.get(c) + 1);
+                    else
+                        map.put(c, val);
+                }
+                System.out.println(map.values());
+                //System.out.println(map.size());
+
+                for(int i = 0; i < t.length(); i++) {
+                    Character k = t.charAt(i);
+                    Integer curVal = map.get(k);
+                    if(map.containsKey(k) && curVal > 1 ){
+                        map.put(k, curVal-1);
+                    }
+                    else
+                        map.remove(k);
+                }
+
+            }
+
+            //System.out.println(map.values());
+            return map.isEmpty();
+
+
+        }
+
+
+
 
 
 
