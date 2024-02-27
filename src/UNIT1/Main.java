@@ -989,8 +989,6 @@ Implement:
         return false;
     }
 
-
-
     public static int[] twoSumSecondVersion(int[] nums, int target) {
 
         HashMap <Integer, Integer> map = new HashMap<Integer, Integer>();
