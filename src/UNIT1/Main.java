@@ -66,9 +66,9 @@ public class Main {
     4. otherwise return false
      */
 
-    //int [] numbers = {1,1,1,3,3,4,3,2,4,2};
+        //int [] numbers = {1,1,1,3,3,4,3,2,4,2};
 
-    //System.out.println(containsDuplicate(numbers));
+        //System.out.println(containsDuplicate(numbers));
 
         /*
         ******Problem 2: Two Sum****
@@ -419,18 +419,18 @@ public class Main {
 
         for (int i = 1; i < nums.length;++i) {
             //if next number is greater than previous number by one, add to the sequence counter
-           if(nums[i] == nums[i-1]+1) {
-               currentLongest++;
-           }
-           //to deal with duplicates so that the counters does not start over yet and to not add to the sequence counter.
-           else if(nums[i] == nums[i-1]) {
+            if(nums[i] == nums[i-1]+1) {
+                currentLongest++;
+            }
+            //to deal with duplicates so that the counters does not start over yet and to not add to the sequence counter.
+            else if(nums[i] == nums[i-1]) {
                 continue;
-           }
-           //no sequence, move to the possible counter
-           else {
-               currentLongest = 1;
-           }
-           //if the current sequence counter is greater than previously recorded, this is the new longest sequence
+            }
+            //no sequence, move to the possible counter
+            else {
+                currentLongest = 1;
+            }
+            //if the current sequence counter is greater than previously recorded, this is the new longest sequence
             if(currentLongest> longestSeq)
                 longestSeq = currentLongest;
         }
@@ -456,12 +456,12 @@ public class Main {
         HashSet<Integer> hSet = new HashSet<>();
 
         for (int num: arr
-             ) {
+        ) {
             hSet.add(num);
         }
 
         for (int num: hSet
-             ) {
+        ) {
             if(!hSet.contains(num-1)){
                 currentNumber = num;
                 counter = 1;
@@ -620,7 +620,7 @@ Implement:
 
         //first add the departure cities
         for (List<String> l: list
-             ) {
+        ) {
             routes.add(l.get(0));
         }
 
@@ -648,45 +648,45 @@ Implement:
     //SECTION 2
 
 
-/*
-PROBLEM 1
-VALID PARENTHESES
-Given a string st containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+    /*
+    PROBLEM 1
+    VALID PARENTHESES
+    Given a string st containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
 
-An input string is valid if:
+    An input string is valid if:
 
-Open brackets must be closed by the same type of brackets. Open brackets must be closed in the correct order.
-Every close bracket has a corresponding open bracket of the same type.
+    Open brackets must be closed by the same type of brackets. Open brackets must be closed in the correct order.
+    Every close bracket has a corresponding open bracket of the same type.
 
-UNDERSTAND:
--JUST TO MAKE SURE WE ARE ONLY EXPECTING THE CHARACTERS LISTED
--NEED TO ACCOUNT FOR SPACES-REMOVE THEM
+    UNDERSTAND:
+    -JUST TO MAKE SURE WE ARE ONLY EXPECTING THE CHARACTERS LISTED
+    -NEED TO ACCOUNT FOR SPACES-REMOVE THEM
 
-MATCH:
--stack as last in first out - LIFO
+    MATCH:
+    -stack as last in first out - LIFO
 
-PLAN:
--PUT THE OPEN SYMBOLS IN A STACK
--REMOVE THE OPEN SYMBOL WHEN A MATCHING CLOSING SYMBOL IS ENCOUNTERED
--MUST BE AWARE OF STOPPING WHEN THE STACK IS EMPTY
--IF STACK DOES NOT GET EMPTIED, THIS MEANS IS NOT A VALID INPUT, AS THERE ARE ITEMS LET OVER THAT DID NOT HAVE A MATCH
+    PLAN:
+    -PUT THE OPEN SYMBOLS IN A STACK
+    -REMOVE THE OPEN SYMBOL WHEN A MATCHING CLOSING SYMBOL IS ENCOUNTERED
+    -MUST BE AWARE OF STOPPING WHEN THE STACK IS EMPTY
+    -IF STACK DOES NOT GET EMPTIED, THIS MEANS IS NOT A VALID INPUT, AS THERE ARE ITEMS LET OVER THAT DID NOT HAVE A MATCH
 
-IMPLEMENT:
- */
+    IMPLEMENT:
+     */
     static boolean validParenthesis(String st) {
         Stack<Character> stack = new Stack<>();
 
-       for (int i = 0; i < st.length();++i ) {
-           char current = st.charAt(i);
+        for (int i = 0; i < st.length();++i ) {
+            char current = st.charAt(i);
 
-           if((current == '(' || current == '['|| current == '{')) {
-               stack.push(current);
-           }
-           else if ((current == ')' && stack.peek() == '(') || (current == ']' && stack.peek() == '[') ||
-                   (current == '}' && stack.peek() == '{')) {
-               stack.pop();
-           }
-       }
+            if((current == '(' || current == '['|| current == '{')) {
+                stack.push(current);
+            }
+            else if ((current == ')' && stack.peek() == '(') || (current == ']' && stack.peek() == '[') ||
+                    (current == '}' && stack.peek() == '{')) {
+                stack.pop();
+            }
+        }
         return stack.empty();
     }
     /*
@@ -940,57 +940,67 @@ IMPLEMENT:
     From Leetcode
      */
 
+    public static boolean isAnagram(String s, String t) {
 
-        public static boolean isAnagram(String s, String t) {
+        HashMap<Character, Integer> map = new HashMap <Character, Integer>();
 
-            HashMap<Character, Integer> map = new HashMap <Character, Integer>();
+        if(s.length() != t.length())
+            return false;
+        else {
+            Integer val = 1;
 
-            if(s.length() != t.length())
-                return false;
-            else {
-                Integer val = 1;
-
-                for(int i = 0; i < s.length(); i++) {
-                    Character c = s.charAt(i);
-                    if(map.containsKey(c))
-                        map.put(c, map.get(c) + 1);
-                    else
-                        map.put(c, val);
-                }
-                System.out.println(map.values());
-                //System.out.println(map.size());
-
-                for(int i = 0; i < t.length(); i++) {
-                    Character k = t.charAt(i);
-                    Integer curVal = map.get(k);
-                    if(map.containsKey(k) && curVal > 1 ){
-                        map.put(k, curVal-1);
-                    }
-                    else
-                        map.remove(k);
-                }
-
+            for(int i = 0; i < s.length(); i++) {
+                Character c = s.charAt(i);
+                if(map.containsKey(c))
+                    map.put(c, map.get(c) + 1);
+                else
+                    map.put(c, val);
             }
+            System.out.println(map.values());
+            //System.out.println(map.size());
 
-            //System.out.println(map.values());
-            return map.isEmpty();
-
+            for(int i = 0; i < t.length(); i++) {
+                Character k = t.charAt(i);
+                Integer curVal = map.get(k);
+                if(map.containsKey(k) && curVal > 1 ){
+                    map.put(k, curVal-1);
+                }
+                else
+                    map.remove(k);
+            }
 
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
+        //System.out.println(map.values());
+        return map.isEmpty();
     }
+
+    public static boolean containsDuplicateSecondVersion(int[] nums) {
+
+        HashSet <Integer> set = new HashSet <Integer>();
+
+        for(int i : nums) {
+            if(set.contains(i))
+                return true;
+            else {
+                set.add(i);
+            }
+        }
+        return false;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+}
 
 
 
