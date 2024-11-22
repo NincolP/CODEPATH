@@ -6,14 +6,18 @@ public class Main3 {
     public static void main(String[] args) {
 
         char[] s = new char[]{'h', 'e', 'l', 'l', 'o'};
-
-        for (int i = 0, j = s.length - 1; i < s.length / 2; i++, j--) {
-            char temp = s[i];
-            s[i] = s[j];
-            s[j] = temp;
-        }
-
-        System.out.println(s);
-
+        System.out.println(reverseArray(s));
     }
+
+
+    //Reverse Array-- Double pointer method
+    public static char [] reverseArray (char [] c) {
+        for (int i = 0, j = c.length - 1; i < c.length / 2; i++, j--) {
+            char temp = c[i];
+            c[i] = c[j];
+            c[j] = temp;
+        }
+        return c;
+    }
+
 }
