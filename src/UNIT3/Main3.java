@@ -5,7 +5,7 @@ public class Main3 {
 
     public static void main(String[] args) {
 
-        char[] s = new char[]{'h', 'e', 'l', 'l', 'o'};
+        char[] s = new char[]{'v', 'e', 'h', 'i', 'c', 'l', 'e'};
         System.out.println(reverseArray(s));
     }
 
