@@ -7,6 +7,11 @@ public class Main3 {
 
         char[] s = new char[]{'v', 'e', 'h', 'i', 'c', 'l', 'e'};
         System.out.println(reverseArray(s));
+
+
+        String a = " ";
+
+        System.out.println(validPalindrome(a));
     }
 
 
@@ -18,6 +23,20 @@ public class Main3 {
             c[j] = temp;
         }
         return c;
+    }
+
+    public static boolean validPalindrome (String s) {
+//TODO need to account for empty characters, for instance when the string is just " " (non- alphanumerical)
+        boolean isIt = false;
+        for (int i = 0, j = s.length() - 1; i < s.length() / 2; i++, j--) {
+            if(s.charAt(i) == s.charAt(j))
+                isIt = true;
+            else
+                return false;
+        }
+
+        return isIt;
+
     }
 
 }
