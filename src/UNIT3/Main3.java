@@ -26,17 +26,25 @@ public class Main3 {
     }
 
     public static boolean validPalindrome (String s) {
-//TODO need to account for empty characters, for instance when the string is just " " (non- alphanumerical)
+//TODO need to account for edge case such as:
+//-Empty characters, for instance when the string is just " " (non- alphanumerical) should return true
         boolean isIt = false;
-        for (int i = 0, j = s.length() - 1; i < s.length() / 2; i++, j--) {
-            if(s.charAt(i) == s.charAt(j))
-                isIt = true;
-            else
-                return false;
+
+        //Edge case, when string contains one null character or is empty
+        if (s.isEmpty() || (s.length() == 1) && s.charAt(0) == ' ')
+            return true;
+        else {
+            for (int i = 0, j = s.length() - 1; i < s.length() / 2; i++, j--) {
+                if (s.charAt(i) == s.charAt(j))
+                    isIt = true;
+                else
+                    return false;
+            }
+
+
+            return isIt;
+
         }
-
-        return isIt;
-
     }
 
 }
