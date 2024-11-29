@@ -9,7 +9,7 @@ public class Main3 {
         System.out.println(reverseArray(s));
 
 
-        String a = " ";
+        String a = "a  na";
 
         System.out.println(validPalindrome(a));
     }
@@ -40,8 +40,7 @@ public class Main3 {
                 else
                     return false;
             }
-
-
+            
             return isIt;
 
         }
