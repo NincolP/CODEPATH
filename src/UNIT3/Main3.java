@@ -9,7 +9,7 @@ public class Main3 {
         System.out.println(reverseArray(s));
 
 
-        String a = "a  na";
+        String a = "    ";
 
         System.out.println(validPalindrome(a));
     }
@@ -25,16 +25,22 @@ public class Main3 {
         return c;
     }
 
+    //Space complexity is O(N)  Time complexity is also O(N)
+
     public static boolean validPalindrome (String s) {
-//TODO need to account for edge case such as:
-//-Empty characters, for instance when the string is just " " (non- alphanumerical) should return true
+//-Empty string, one character strings or string containing spaces only should return true.
         boolean isIt = false;
+        //removing all the spaces from the string.
+        s= s.replaceAll("\\s", "");
+
+        System.out.println(s);
 
         //Edge case, when string contains one null character or is empty
-        if (s.isEmpty() || (s.length() == 1) && s.charAt(0) == ' ')
+        if (s.isEmpty() || (s.length() == 1))
             return true;
         else {
             for (int i = 0, j = s.length() - 1; i < s.length() / 2; i++, j--) {
+
                 if (s.charAt(i) == s.charAt(j))
                     isIt = true;
                 else
