@@ -9,7 +9,7 @@ public class Main3 {
         System.out.println(reverseArray(s));
 
 
-        String a = "    ";
+        String a = "A man, a plan, a canal: Panama";
 
         System.out.println(validPalindrome(a));
     }
@@ -26,14 +26,15 @@ public class Main3 {
     }
 
     //Space complexity is O(N)  Time complexity is also O(N)
-
+//TODO - this is not currently accounting for non alpha characters like commas
     public static boolean validPalindrome (String s) {
 //-Empty string, one character strings or string containing spaces only should return true.
         boolean isIt = false;
-        //removing all the spaces from the string.
-        s= s.replaceAll("\\s", "");
+        //removing all non-alphabetic characters including spaces and brings all characters to lower case.
+        s = s.replaceAll("[^a-zA-Z]", "").toLowerCase();
 
-        System.out.println(s);
+        //This one below was just removing spaces
+        //s= s.replaceAll("\\s", "");
 
         //Edge case, when string contains one null character or is empty
         if (s.isEmpty() || (s.length() == 1))
@@ -48,8 +49,6 @@ public class Main3 {
             }
             
             return isIt;
-
         }
     }
-
 }
